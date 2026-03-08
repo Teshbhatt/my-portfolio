@@ -445,7 +445,6 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
     <FadeIn delay={0.2} direction="left">
       <img
         src="/ProfPic.jpeg"
-        alt="Profile photo"
         style={{
           flexShrink: 0,
           width: 200,
