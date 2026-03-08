@@ -126,6 +126,7 @@ const GitHubIcon = () => (
   </svg>
 );
 
+// eslint-disable-next-line no-unused-vars
 const ExternalIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
@@ -175,17 +176,14 @@ export default function Portfolio() {
 
   const c = {
     bg: dark ? "#0e0e0e" : "#f7f7f5",
-    bg2: dark ? "#161616" : "#ffffff",
     text: dark ? "#ededed" : "#111111",
     muted: dark ? "#888" : "#666",
     border: dark ? "#262626" : "#e5e5e5",
     accent: "#1a56db",
-    accentHover: "#1440b0",
     pill: dark ? "#1e1e1e" : "#f0f0ee",
     pillText: dark ? "#ccc" : "#444",
     navBg: dark ? "rgba(14,14,14,0.88)" : "rgba(247,247,245,0.88)",
     cardBg: dark ? "#141414" : "#ffffff",
-    timelineDot: "#1a56db",
   };
 
   const scrollTo = (id) => {
@@ -445,6 +443,7 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
     <FadeIn delay={0.2} direction="left">
       <img
         src="/ProfPic.jpeg"
+        alt="Teshwindev Singh"
         style={{
           flexShrink: 0,
           width: 200,
