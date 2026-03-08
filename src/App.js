@@ -8,6 +8,7 @@ const PROJECTS = [
     desc: "Decentralised restaurant review platform built on-chain. Smart contracts ensure tamper-proof, verified reviews powered by Google Places API integration.",
     tags: ["Solidity", "Blockchain", "Smart Contracts", "Google API", "Web3"],
     team: "Team of 4",
+    github: "https://github.com/tsujisalju/mac-n-mana",
   },
   {
     name: "Inventory Management System",
@@ -511,9 +512,9 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 14 }}>
-                    {/* <a href={p.github} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="GitHub">
+                    { <a href={p.github} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="GitHub">
                       <GitHubIcon /> GitHub
-                    </a>  */}
+                    </a>  }
                     {/* <a href={p.demo} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="Live Demo">
                       <ExternalIcon /> Live Demo
                     </a> */}
