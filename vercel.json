@@ -1,0 +1,6 @@
+{
+  "buildCommand": "react-scripts build",
+  "env": {
+    "CI": "false"
+  }
+}
