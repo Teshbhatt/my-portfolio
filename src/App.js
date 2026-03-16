@@ -373,7 +373,7 @@ export default function Portfolio() {
           </FadeIn>
           <FadeIn delay={0.35}>
             <p className="hero-sub" style={{ fontSize: 20, color: c.muted, lineHeight: 1.65, maxWidth: 560, marginBottom: 40, fontWeight: 300 }}>
-              I build reliable APIs, scalable backend systems, and polished mobile experiences that users trust.
+              I build reliable APIs, scalable backend systems with AI integration and polished mobile application experiences that users trust.
             </p>
           </FadeIn>
           <FadeIn delay={0.48}>
