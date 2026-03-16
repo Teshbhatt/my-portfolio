@@ -24,12 +24,7 @@ const PROJECTS = [
     tags: ["Python", "File I/O", "Object-Oriented Programming"],
     team: "Solo Project",
   },
-  {
-    name: "Ongoing Mobile Application Development for Car Wash Service",
-    desc: "Currently developing a mobile application for a car wash service, focusing on user-friendly design and seamless booking experience.",
-    tags: ["Flutter", "Dart", "Mobile Development", "Supabase", "APIs"],
-    team: "Solo Project",
-  }
+
 ];
 
 const SKILLS = [
