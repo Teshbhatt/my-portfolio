@@ -451,7 +451,7 @@ I'm a Software Engineer with a focus on backend systems and blockchain developme
       </FadeIn>
       <FadeIn delay={0.2}>
         <p style={{ fontSize: 16, lineHeight: 1.8, color: c.muted, marginBottom: 20 }}>
-I'm drawn to the world of crypto and blockchain — which is what drew me to Web3. Whether it's writing tamper-proof smart contracts in Solidity or architecting a clean PHP backend or even researching on upcoming crypto projects, I care about code that is reliable, readable, and built to last.        </p>
+I'm drawn to the world of crypto and blockchain — which is what drew me to Web3. Whether it's writing tamper-proof smart contracts in Solidity or architecting a clean PHP backend or even researching on upcoming crypto projects, I care about architecture that is reliable and built to last.        </p>
       </FadeIn>
       <FadeIn delay={0.3}>
         <p style={{ fontSize: 16, lineHeight: 1.8, color: c.muted, marginBottom: 36 }}>
