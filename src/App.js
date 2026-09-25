@@ -14,8 +14,6 @@ const PROJECTS = [
     name: "Inventory Management System",
     desc: "Full-featured inventory system for tracking stock levels, managing suppliers, and generating reports — built with PHP and a relational database.",
     tags: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
-    github: "https://github.com/Teshbhatt/PHP-Invetory-System",
-    demo: "#",
     team: "Solo Project",
   },
   {
@@ -95,7 +93,7 @@ const HACKATHONS = [
 
 const EXPERIENCE = [
   {
-    period: "2023 – Present",
+    period: "June 2023 – June 2026",
     role: "Student",
     company: "Asia Pacific University (APU)",
     points: [
@@ -106,7 +104,7 @@ const EXPERIENCE = [
   },
   {
     period: "June 2025 – September 2025",
-    role: "Intern Software Engineer",
+    role: "Intern Backend Software Engineer",
     company: "AstiosTech Sdn Bhd",
     points: [
       "Built a PHP-based inventory management system for tracking stock, suppliers, and generating business reports.",
