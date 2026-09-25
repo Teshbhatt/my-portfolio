@@ -24,6 +24,24 @@ const PROJECTS = [
     tags: ["Python", "File I/O", "Object-Oriented Programming"],
     team: "Solo Project",
   },
+  {
+    name: "Book Inventory API",
+    desc: "FastAPI-based CRUD service for personal book inventory management, built to test RESTful endpoint design, request handling, and API structuring.",
+    tags: ["Python", "FastAPI", "REST API"],
+    team: "Solo Project",
+  },
+  {
+    name: "Transit Planner — Malaysian Public Transport System",
+    desc: "Final Year Project. Backend-driven transit planning tool with dynamic fare calculation and a community-sourced route data model.",
+    tags: ["Python", "Node.js", "Backend"],
+    team: "Final Year Project",
+  },
+  {
+    name: "Car Wash Booking & Management System",
+    desc: "Booking and management platform for a car wash business, currently in progress — working through payment gateway integration.",
+    tags: ["Backend", "Payments"],
+    status: "In Progress",
+  },
 
 ];
 
@@ -34,15 +52,23 @@ const SKILLS = [
   },
   {
     label: "Backend & APIs",
-    items: ["PHP", "MySQL", "REST APIs", "Google Maps API", "Node.js", "PostgreSQL"],
+    items: ["PHP", "FastAPI", "REST APIs", "Google Maps API", "Node.js", "Zod (schema validation)", "Unit Testing"],
+  },
+  {
+    label: "Frontend & Mobile",
+    items: ["React", "Next.js", "Flutter/Dart"],
+  },
+  {
+    label: "Databases & Cloud",
+    items: ["MySQL", "PostgreSQL", "Supabase", "AWS", "Docker", "Storacha (decentralized storage)"],
   },
   {
     label: "Tools & Dev",
-    items: ["Git", "GitHub", "VS Code", "Postman", "Linux", "MetaMask", "AI tools (ChatGPT, Gemini, Claude)"],
+    items: ["Git", "GitHub", "VS Code", "Postman", "Thunder Client", "Linux", "MetaMask", "AI tools (ChatGPT, Gemini, Claude)"],
   },
   {
     label: "Languages",
-    items: ["JavaScript", "Python", "PHP", "SQL", "Flutter/Dart", "C#", "Rust", "CLI tools"],
+    items: ["JavaScript", "TypeScript", "Python", "PHP", "SQL", "C#", "C++", "Rust", "CLI tools"],
   }
 ];
 
@@ -87,6 +113,15 @@ const EXPERIENCE = [
       "Designed and implemented relational database schemas using MySQL for data integrity and query performance.",
       "Collaborated with a team of developers, participated in code reviews, and followed agile development practices to deliver a production-ready tool.",
       "Managed GLPI ticketing system for internal IT support, improving response times and issue tracking efficiency for Ministry Of Health (Malaysia), Maybank, Taylors University and Sunway University.",
+    ],
+  },
+  {
+    period: "October 2024 – May 2025",
+    role: "Part-Time Helper",
+    company: "Lotus",
+    points: [
+      "Assisted with customer service, handling inquiries and support to maintain a positive customer experience.",
+      "Handled transport and organization of heavy shipments to shelves, supporting stock flow and store operations.",
     ],
   },
 ];
@@ -359,7 +394,7 @@ export default function Portfolio() {
         <section style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 24px", maxWidth: 860, margin: "0 auto", position: "relative" }}>
           <FadeIn delay={0.1}>
             <div style={{ fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", color: c.accent, fontWeight: 600, marginBottom: 20 }}>
-              Backend &amp; Mobile Engineer
+              Backend &amp; Full-Stack Developer
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -386,8 +421,8 @@ export default function Portfolio() {
                 View My Work
               </button>
               <a
-                href="TeshwindevSinghCV.pdf"
-                download={"Tesh_CV.pdf"}
+                href="Teshwindev_Singh_Resume.pdf"
+                download={"TeshBhatt_Resume.pdf"}
                 className="btn-outline"
                 style={{ padding: "12px 28px", background: "transparent", color: c.accent, border: `1.5px solid ${c.accent}`, borderRadius: 6, fontSize: 14, fontWeight: 600, cursor: "pointer", letterSpacing: "0.3px", transition: "all 0.2s", fontFamily: "'DM Sans', sans-serif" }}
               >
@@ -426,7 +461,7 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
       </FadeIn>
       <FadeIn delay={0.4}>
         <div className="stats-row" style={{ display: "flex", gap: 12 }}>
-          {["2+ Projects", "2 Hackathons", "Blockchain & Web", "Open to Work ✓"].map((s, i) => (
+          {["6+ Projects", "3 Hackathons", "Blockchain & Web", "Open to Work ✓"].map((s, i) => (
             <div key={i} style={{ border: `1px solid ${c.border}`, borderRadius: 6, padding: "8px 14px", fontSize: 12, fontWeight: 500, color: i === 3 ? c.accent : c.muted, whiteSpace: "nowrap" }}>
               {s}
             </div>
@@ -498,7 +533,7 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
                   <div className="card-accent" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: c.accent, borderRadius: "10px 10px 0 0" }} />
                   <div style={{ fontSize: 16, fontWeight: 700, color: c.text, marginBottom: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     {p.name}
-                    {p.team && <span style={{ fontSize: 10, background: c.accent + "22", color: c.accent, border: `1px solid ${c.accent}44`, borderRadius: 4, padding: "2px 8px", fontWeight: 600, letterSpacing: "0.5px" }}>{p.team}</span>}
+                    {(p.team || p.status) && <span style={{ fontSize: 10, background: c.accent + "22", color: c.accent, border: `1px solid ${c.accent}44`, borderRadius: 4, padding: "2px 8px", fontWeight: 600, letterSpacing: "0.5px" }}>{p.team || p.status}</span>}
                   </div>
                   <p style={{ fontSize: 13.5, color: c.muted, lineHeight: 1.6, marginBottom: 16 }}>{p.desc}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
@@ -507,9 +542,15 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 14 }}>
-                    { <a href={p.github} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="GitHub">
-                      <GitHubIcon /> GitHub
-                    </a>  }
+                    {p.github ? (
+                      <a href={p.github} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="GitHub">
+                        <GitHubIcon /> GitHub
+                      </a>
+                    ) : (
+                      <span style={{ fontSize: 12, color: c.muted, fontStyle: "italic" }}>
+                        {p.status || "Code available on request"}
+                      </span>
+                    )}
                     {/* <a href={p.demo} className="icon-link" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: c.muted, fontWeight: 500, transition: "color 0.2s" }} aria-label="Live Demo">
                       <ExternalIcon /> Live Demo
                     </a> */}
@@ -577,7 +618,7 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
               Teshwindev Singh
             </div>
             <div style={{ fontSize: 12, letterSpacing: "3px", textTransform: "uppercase", color: "#555", marginBottom: 28 }}>
-              Backend &amp; Mobile Engineer
+              Backend &amp; Full-Stack Developer
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: 24, marginBottom: 28 }}>
               {[
