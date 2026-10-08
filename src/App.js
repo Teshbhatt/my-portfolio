@@ -1,8 +1,27 @@
 import { useState, useEffect, useRef } from "react";
 
-const NAV_LINKS = ["About", "Experience", "Projects", "Skills", "Hackathons"];
+const NAV_LINKS = ["About", "Experience", "Projects", "Skills", "Certifications", "Hackathons"];
+
+const CERTIFICATIONS = [
+  {
+    name: "Bachelor of Software Engineering",
+    org: "Asia Pacific University",
+    year: "Conferred 2026",
+  },
+  {
+    name: "CCNA (Cisco Certified Network Associate)",
+    org: "Cisco Networking Academy",
+    year: "2022",
+  },
+];
 
 const PROJECTS = [
+  {
+    name: "Warehouse Management System",
+    desc: "Designed, deployed, and currently maintain a live web application in daily use by a real business — order document generation, serial number and barcode printing, stock management, and invoicing (phase one). Also building a companion mobile app for on-site stock tagging, barcode scanning, and invoicing, extending the system's fintech capabilities to mobile.",
+    tags: ["Python", "FastAPI", "TypeScript", "Flutter", "Fintech", "Production"],
+    status: "Live",
+  },
   {
     name: "MacNMana — Blockchain Restaurant Reviews",
     desc: "Decentralised restaurant review platform built on-chain. Smart contracts ensure tamper-proof, verified reviews powered by Google Places API integration.",
@@ -14,6 +33,8 @@ const PROJECTS = [
     name: "Inventory Management System",
     desc: "Full-featured inventory system for tracking stock levels, managing suppliers, and generating reports — built with PHP and a relational database.",
     tags: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    github: "https://github.com/Teshbhatt/PHP-Invetory-System",
+    demo: "#",
     team: "Solo Project",
   },
   {
@@ -93,18 +114,18 @@ const HACKATHONS = [
 
 const EXPERIENCE = [
   {
-    period: "June 2023 – June 2026",
-    role: "Student",
+    period: "2023 – 2026",
+    role: "Bachelor Graduate Student",
     company: "Asia Pacific University (APU)",
     points: [
-      "Building full-stack and blockchain applications as part of team and solo projects.",
+      "Built full-stack and blockchain applications as part of team and solo projects.",
       "Developed MacNMana, a decentralised restaurant review dApp using Solidity smart contracts and Google Places API.",
       "Competed in multiple hackathons including DevMatch and Solana Ideathon, delivering working prototypes under tight deadlines.",
     ],
   },
   {
     period: "June 2025 – September 2025",
-    role: "Intern Backend Software Engineer",
+    role: "Intern Software Engineer",
     company: "AstiosTech Sdn Bhd",
     points: [
       "Built a PHP-based inventory management system for tracking stock, suppliers, and generating business reports.",
@@ -116,7 +137,7 @@ const EXPERIENCE = [
   {
     period: "October 2024 – May 2025",
     role: "Part-Time Helper",
-    company: "Lotus",
+    company: "Lotus Malaysia",
     points: [
       "Assisted with customer service, handling inquiries and support to maintain a positive customer experience.",
       "Handled transport and organization of heavy shipments to shelves, supporting stock flow and store operations.",
@@ -419,8 +440,8 @@ export default function Portfolio() {
                 View My Work
               </button>
               <a
-                href="Teshwindev_Singh_Resume.pdf"
-                download={"TeshBhatt_Resume.pdf"}
+                href="Teshwindev_Singh_CV.pdf"
+                download={"Tesh_CV.pdf"}
                 className="btn-outline"
                 style={{ padding: "12px 28px", background: "transparent", color: c.accent, border: `1.5px solid ${c.accent}`, borderRadius: 6, fontSize: 14, fontWeight: 600, cursor: "pointer", letterSpacing: "0.3px", transition: "all 0.2s", fontFamily: "'DM Sans', sans-serif" }}
               >
@@ -451,7 +472,7 @@ I'm a Software Engineer with a focus on backend systems and blockchain developme
       </FadeIn>
       <FadeIn delay={0.2}>
         <p style={{ fontSize: 16, lineHeight: 1.8, color: c.muted, marginBottom: 20 }}>
-I'm drawn to the world of crypto and blockchain — which is what drew me to Web3. Whether it's writing tamper-proof smart contracts in Solidity or architecting a clean PHP backend or even researching on upcoming crypto projects, I care about architecture that is reliable and built to last.        </p>
+I'm drawn to the world of crypto and blockchain — which is what drew me to Web3. Whether it's writing tamper-proof smart contracts in Solidity or architecting a clean PHP backend or even researching on upcoming crypto projects, I care about code that is reliable, readable, and built to last.        </p>
       </FadeIn>
       <FadeIn delay={0.3}>
         <p style={{ fontSize: 16, lineHeight: 1.8, color: c.muted, marginBottom: 36 }}>
@@ -459,7 +480,7 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
       </FadeIn>
       <FadeIn delay={0.4}>
         <div className="stats-row" style={{ display: "flex", gap: 12 }}>
-          {["6+ Projects", "3 Hackathons", "Blockchain & Web", "Open to Work ✓"].map((s, i) => (
+          {["7+ Projects", "3 Hackathons", "Blockchain & Web", "Open to Work ✓"].map((s, i) => (
             <div key={i} style={{ border: `1px solid ${c.border}`, borderRadius: 6, padding: "8px 14px", fontSize: 12, fontWeight: 500, color: i === 3 ? c.accent : c.muted, whiteSpace: "nowrap" }}>
               {s}
             </div>
@@ -581,6 +602,25 @@ I'm drawn to the world of crypto and blockchain — which is what drew me to Web
                       </span>
                     ))}
                   </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+
+        {/* CERTIFICATIONS */}
+        <section id="certifications" style={{ ...style.section, borderTop: `1px solid ${c.border}` }}>
+          <FadeIn><div style={style.sectionLabel}>Certifications</div></FadeIn>
+          <FadeIn delay={0.05}><h2 style={{ ...style.h2, fontSize: 28 }}>Credentials</h2></FadeIn>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {CERTIFICATIONS.map((cert, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div style={{ background: c.cardBg, border: `1px solid ${c.border}`, borderRadius: 10, padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
+                  <div>
+                    <div style={{ fontSize: 16, fontWeight: 700, color: c.text, marginBottom: 4 }}>{cert.name}</div>
+                    <div style={{ fontSize: 14, color: c.muted }}>{cert.org}</div>
+                  </div>
+                  <span style={{ fontSize: 10, background: c.accent + "22", color: c.accent, border: `1px solid ${c.accent}44`, borderRadius: 4, padding: "2px 8px", fontWeight: 600, letterSpacing: "0.5px", whiteSpace: "nowrap" }}>{cert.year}</span>
                 </div>
               </FadeIn>
             ))}
