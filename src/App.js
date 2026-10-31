@@ -440,7 +440,7 @@ export default function Portfolio() {
                 View My Work
               </button>
               <a
-                href="Teshwindev_Singh_CV.pdf"
+                href="Teshwindev_Singh_Resume.pdf"
                 download={"Tesh_CV.pdf"}
                 className="btn-outline"
                 style={{ padding: "12px 28px", background: "transparent", color: c.accent, border: `1.5px solid ${c.accent}`, borderRadius: 6, fontSize: 14, fontWeight: 600, cursor: "pointer", letterSpacing: "0.3px", transition: "all 0.2s", fontFamily: "'DM Sans', sans-serif" }}
